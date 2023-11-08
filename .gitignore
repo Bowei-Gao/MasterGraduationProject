@@ -7,7 +7,7 @@ target/
 data
 .DS_Store
 *.pkl
-temp
+*df.csv
 
 ### STS ###
 .apt_generated
