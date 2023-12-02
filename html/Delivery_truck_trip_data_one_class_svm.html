@@ -14767,9 +14767,9 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_anomaly</span> <span class="o">=</span> <span class="n">anomaly_records</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">'ontime'</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
 <span class="n">X_test</span> <span class="o">=</span> <span class="n">df_test</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">'ontime'</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
-<span class="n">y_test</span> <span class="o">=</span> <span class="n">df_test</span><span class="p">[</span><span class="s1">'ontime'</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">({</span><span class="kc">True</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="kc">False</span><span class="p">:</span> <span class="mi">1</span><span class="p">})</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+<span class="n">y_test</span> <span class="o">=</span> <span class="n">df_test</span><span class="p">[</span><span class="s1">'ontime'</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">({</span><span class="kc">True</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="kc">False</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">})</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
 <span class="n">X_normal</span> <span class="o">=</span> <span class="n">df_remaining_normal</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">'ontime'</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
-<span class="n">y_normal</span> <span class="o">=</span> <span class="n">df_remaining_normal</span><span class="p">[</span><span class="s1">'ontime'</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">({</span><span class="kc">True</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="kc">False</span><span class="p">:</span> <span class="mi">1</span><span class="p">})</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+<span class="n">y_normal</span> <span class="o">=</span> <span class="n">df_remaining_normal</span><span class="p">[</span><span class="s1">'ontime'</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">({</span><span class="kc">True</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="kc">False</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">})</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -14936,8 +14936,8 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>array([[ 40, 806],
-       [194, 652]])</pre>
+<pre>array([[177, 669],
+       [ 40, 806]])</pre>
 </div>
 
 </div>
@@ -14978,12 +14978,12 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>              precision    recall  f1-score   support
 
-          -1       0.17      0.05      0.07       846
-           1       0.45      0.77      0.57       846
+          -1       0.82      0.21      0.33       846
+           1       0.55      0.95      0.69       846
 
-    accuracy                           0.41      1692
-   macro avg       0.31      0.41      0.32      1692
-weighted avg       0.31      0.41      0.32      1692
+    accuracy                           0.58      1692
+   macro avg       0.68      0.58      0.51      1692
+weighted avg       0.68      0.58      0.51      1692
 </pre>
 </div>
 </div>
